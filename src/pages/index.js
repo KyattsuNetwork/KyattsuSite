@@ -3,8 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -33,7 +32,12 @@ export default function Home() {
       description="KyattsuNetwork - Cats will find the way out">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <BrowserOnly>
+          {() => {
+            const HomepageFeatures = require('@site/src/components/HomepageFeatures')
+            return <HomepageFeatures />
+          }}
+        </BrowserOnly>
       </main>
     </Layout>
   );
