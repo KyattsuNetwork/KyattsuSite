@@ -34,7 +34,7 @@ export default function Home() {
       <main>
         <BrowserOnly>
           {() => {
-            const HomepageFeatures = require('@site/src/components/HomepageFeatures')
+            const HomepageFeatures = require('@site/src/components/HomepageFeatures').default
             return <HomepageFeatures />
           }}
         </BrowserOnly>

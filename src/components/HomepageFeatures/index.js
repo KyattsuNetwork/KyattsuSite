@@ -20,7 +20,7 @@ function Feature({title, description}) {
 class Features extends Component {
   constructor() {
     super();
-    this.state = { blockHeight: NaN, timer: 0 };
+    this.state = { blockHeight: "NaN", timer: 0 };
   }
 
   async componentDidMount() {
