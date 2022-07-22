@@ -5,6 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './index.module.css';
+import MDXContent from '@theme/MDXContent';
+import IndexContent from './content.mdx'
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -15,9 +17,14 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
+            className="button button--secondary button--lg button--split"
+            to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.kyattsu.network#/explorer">
             Explore
+          </Link>
+          <Link
+            className="button button--primary button--lg button--split"
+            to="/docs/intro">
+            Docs
           </Link>
         </div>
       </div>
@@ -38,6 +45,12 @@ export default function Home() {
             return <HomepageFeatures />
           }}
         </BrowserOnly>
+        <br></br>
+        <div className="container text-centered">
+          <MDXContent>
+            <IndexContent />
+          </MDXContent>
+        </div>
       </main>
     </Layout>
   );

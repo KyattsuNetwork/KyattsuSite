@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'KyattsuNetwork',
+  title: 'Kyattsu Network',
   tagline: 'Cats will find the way out.',
   url: 'https://kyattsu.network',
   baseUrl: '/',
